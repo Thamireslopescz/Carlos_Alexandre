@@ -347,7 +347,6 @@ function HeroPhotoCard({ dark }: { dark: boolean }) {
             pointerEvents: 'none',
           }}
         />
-        </div>
       </div>
 
       {/* Floating badge */}
