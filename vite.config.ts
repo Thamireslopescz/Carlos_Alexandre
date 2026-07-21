@@ -3,6 +3,10 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import path from 'node:path'
 
+const siteConfiguration = {
+  title: "Carlos Alexandre - PagBank",
+  description: "Consulor PagBank Região Sul ",
+}
 
 const isFigmaSandbox = process.env.FIGMA === '1' || process.env.FIGMA === 'true'
 
