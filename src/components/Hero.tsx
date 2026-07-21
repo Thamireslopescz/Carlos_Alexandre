@@ -358,12 +358,6 @@ function HeroPhotoCard({ dark }: { dark: boolean }) {
               border: '1px solid rgba(255,255,255,0.1)',
             }}
           >
-            <div style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, fontSize: 17, color: '#FAFAFA', letterSpacing: '-0.02em' }}>
-              Carlos Alexandre
-            </div>
-            <div style={{ fontSize: 13, color: '#00C86F', fontWeight: 500, marginTop: 3 }}>
-              Consultor Comercial · PagBank Sul
-            </div>
           </div>
         </div>
       </div>
