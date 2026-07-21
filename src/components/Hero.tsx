@@ -347,9 +347,6 @@ function HeroPhotoCard({ dark }: { dark: boolean }) {
             pointerEvents: 'none',
           }}
         />
-        {/* Name tag */}
-        <div style={{ position: 'absolute', bottom: 24, left: 24, right: 24 }}>
-          </div>
         </div>
       </div>
 
