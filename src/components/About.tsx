@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
+import consultorPhoto from '../imports/image-1.png'
 
-const WHATSAPP = 'https://wa.me/5541999999999?text=Olá%20Carlos%2C%20gostaria%20de%20conhecer%20melhor%20suas%20soluções!'
+const WHATSAPP = 'https://wa.me/5541999999999?text=Olá%20Carlos%2C%20gostaria%20de%20agendar%20uma%20conversa!'
 
 interface Props {
   dark: boolean
@@ -33,7 +34,7 @@ export default function About({ dark }: Props) {
     { label: 'Consultor certificado', value: 'PagBank Oficial' },
     { label: 'Anos de experiência', value: '8 anos' },
     { label: 'Clientes na carteira', value: '+500' },
-    { label: 'Estados atendidos', value: 'PR · SC · RS' },
+    { label: 'Região de atuação', value: 'PR · SC · RS' },
   ]
 
   return (
@@ -55,7 +56,7 @@ export default function About({ dark }: Props) {
         }}
         className="about-grid"
       >
-        {/* Left: visual */}
+        {/* Left: photo */}
         <div
           className="about-animate"
           style={{
@@ -65,116 +66,109 @@ export default function About({ dark }: Props) {
           }}
         >
           <div style={{ position: 'relative' }}>
-            {/* Main photo container */}
+            {/* Decorative blur ring */}
+            <div
+              aria-hidden="true"
+              style={{
+                position: 'absolute',
+                inset: -16,
+                borderRadius: 40,
+                background: 'linear-gradient(135deg, rgba(0,200,111,0.12), rgba(0,140,82,0.06))',
+                filter: 'blur(20px)',
+                zIndex: 0,
+                pointerEvents: 'none',
+              }}
+            />
+
+            {/* Photo container */}
             <div
               style={{
                 borderRadius: 28,
                 overflow: 'hidden',
-                background: dark
-                  ? 'linear-gradient(145deg, #1a2e20, #0d1a10)'
-                  : 'linear-gradient(145deg, #e8f5ee, #d0edda)',
                 aspectRatio: '4/5',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                border: dark ? '1px solid rgba(0,200,111,0.15)' : '1px solid rgba(0,200,111,0.12)',
-                boxShadow: dark
-                  ? '0 24px 80px rgba(0,0,0,0.5)'
-                  : '0 24px 80px rgba(0,200,111,0.12)',
                 position: 'relative',
+                zIndex: 1,
+                boxShadow: dark
+                  ? '0 24px 80px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.06)'
+                  : '0 24px 80px rgba(0,200,111,0.14), 0 0 0 1px rgba(0,0,0,0.05)',
+                animation: 'float 6s ease-in-out infinite',
               }}
             >
               <img
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=750&fit=crop&auto=format"
-                alt="Carlos Alexandre — Consultor PagBank"
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover',
-                  display: 'block',
-                }}
+                src={consultorPhoto}
+                alt="Carlos Alexandre — Consultor Comercial PagBank"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
               />
-              {/* Overlay */}
+              {/* Gradient overlay */}
               <div
                 style={{
                   position: 'absolute',
                   inset: 0,
-                  background: 'linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 50%)',
+                  background: 'linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 50%)',
+                  pointerEvents: 'none',
                 }}
               />
-              {/* Name tag over photo */}
-              <div
-                style={{
-                  position: 'absolute',
-                  bottom: 24,
-                  left: 24,
-                  right: 24,
-                }}
-              >
+              {/* Name overlay */}
+              <div style={{ position: 'absolute', bottom: 24, left: 24, right: 24 }}>
                 <div
                   style={{
                     borderRadius: 16,
                     padding: '14px 18px',
-                    background: 'rgba(0,0,0,0.65)',
-                    backdropFilter: 'blur(20px)',
-                    border: '1px solid rgba(255,255,255,0.12)',
+                    background: 'rgba(9,9,11,0.7)',
+                    backdropFilter: 'blur(24px)',
+                    border: '1px solid rgba(255,255,255,0.1)',
                   }}
                 >
-                  <div
-                    style={{
-                      fontFamily: "'Plus Jakarta Sans', sans-serif",
-                      fontWeight: 700,
-                      fontSize: 17,
-                      color: '#FAFAFA',
-                      letterSpacing: '-0.02em',
-                    }}
-                  >
+                  <div style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, fontSize: 17, color: '#FAFAFA', letterSpacing: '-0.02em' }}>
                     Carlos Alexandre
                   </div>
-                  <div style={{ fontSize: 13, color: '#00C86F', fontWeight: 500, marginTop: 2 }}>
-                    Consultor Comercial · PagBank
+                  <div style={{ fontSize: 13, color: '#00C86F', fontWeight: 500, marginTop: 3 }}>
+                    Consultor Comercial · PagBank Sul
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Floating credential card */}
+            {/* Floating certified badge */}
             <div
               style={{
                 position: 'absolute',
                 top: 24,
-                right: -24,
+                right: -20,
+                zIndex: 2,
                 borderRadius: 16,
-                padding: '16px 20px',
-                background: dark ? 'rgba(24,24,27,0.95)' : 'rgba(255,255,255,0.97)',
-                border: dark ? '1px solid rgba(255,255,255,0.1)' : '1px solid rgba(0,0,0,0.08)',
+                padding: '14px 18px',
+                background: dark ? 'rgba(18,18,22,0.97)' : 'rgba(255,255,255,0.97)',
+                border: dark ? '1px solid rgba(255,255,255,0.09)' : '1px solid rgba(0,0,0,0.08)',
                 boxShadow: '0 12px 40px rgba(0,0,0,0.18)',
                 backdropFilter: 'blur(20px)',
-                animation: 'float 6s ease-in-out infinite',
+                animation: 'float 7s ease-in-out infinite reverse',
+                display: 'flex',
+                alignItems: 'center',
+                gap: 10,
               }}
             >
-              <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                <div
-                  style={{
-                    width: 36,
-                    height: 36,
-                    borderRadius: 10,
-                    background: 'linear-gradient(135deg, #00C86F, #008C52)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                  }}
-                >
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
-                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-                  </svg>
+              <div
+                style={{
+                  width: 38,
+                  height: 38,
+                  borderRadius: 10,
+                  background: 'linear-gradient(135deg, #00C86F, #008C52)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  boxShadow: '0 4px 12px rgba(0,200,111,0.35)',
+                }}
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+                  <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                </svg>
+              </div>
+              <div>
+                <div style={{ fontSize: 12.5, fontWeight: 700, color: dark ? '#FAFAFA' : '#09090B', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+                  Consultor Certificado
                 </div>
-                <div>
-                  <div style={{ fontSize: 12.5, fontWeight: 700, color: dark ? '#FAFAFA' : '#09090B', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-                    Consultor Certificado
-                  </div>
-                  <div style={{ fontSize: 11.5, color: '#00C86F', fontWeight: 500 }}>PagBank Oficial 2024</div>
-                </div>
+                <div style={{ fontSize: 11.5, color: '#00C86F', fontWeight: 500 }}>PagBank Oficial</div>
               </div>
             </div>
           </div>
@@ -189,7 +183,7 @@ export default function About({ dark }: Props) {
               padding: '5px 14px',
               borderRadius: 99,
               background: dark ? 'rgba(0,200,111,0.08)' : 'rgba(0,200,111,0.07)',
-              border: '1px solid rgba(0,200,111,0.18)',
+              border: '1px solid rgba(0,200,111,0.2)',
               marginBottom: 20,
               fontSize: 12.5,
               fontWeight: 600,
@@ -219,8 +213,7 @@ export default function About({ dark }: Props) {
               transition: 'opacity 0.5s ease, transform 0.5s ease',
             }}
           >
-            Um especialista no
-            <br />
+            Especialista em soluções{' '}
             <span
               style={{
                 background: 'linear-gradient(135deg, #00C86F, #008C52)',
@@ -229,8 +222,9 @@ export default function About({ dark }: Props) {
                 backgroundClip: 'text',
               }}
             >
-              seu lado
-            </span>
+              financeiras
+            </span>{' '}
+            para o Sul do Brasil
           </h2>
 
           <p
@@ -245,9 +239,9 @@ export default function About({ dark }: Props) {
               transition: 'opacity 0.5s ease, transform 0.5s ease',
             }}
           >
-            Com mais de 8 anos de experiência no mercado de meios de pagamento, Carlos Alexandre atua
-            como consultor comercial sênior do PagBank, especializado em atendimento a empresas de
-            todos os portes na Região Sul do Brasil.
+            Com mais de 8 anos de experiência no mercado de meios de pagamento, Carlos Alexandre
+            atua como consultor comercial sênior do PagBank, especializado em soluções completas
+            para empresas de todos os portes no Paraná, Santa Catarina e Rio Grande do Sul.
           </p>
           <p
             className="about-animate"
@@ -261,18 +255,19 @@ export default function About({ dark }: Props) {
               transition: 'opacity 0.5s ease, transform 0.5s ease',
             }}
           >
-            Sua abordagem é diferente: sem scripts engessados ou propostas genéricas.
-            Carlos analisa cada negócio individualmente e apresenta a solução que realmente
-            faz sentido — com transparência, agilidade e suporte contínuo.
+            Sua abordagem é diferente: sem scripts genéricos ou propostas padrão.
+            Carlos analisa cada negócio individualmente — maquininhas, conta PJ, antecipação
+            de recebíveis, Link de Pagamento e soluções enterprise — entregando o que
+            realmente faz sentido para o seu momento.
           </p>
 
-          {/* Credentials grid */}
+          {/* Credentials */}
           <div
             className="about-animate"
             style={{
               display: 'grid',
               gridTemplateColumns: '1fr 1fr',
-              gap: 14,
+              gap: 12,
               marginBottom: 36,
               opacity: 0,
               transform: 'translateY(20px)',
@@ -287,19 +282,10 @@ export default function About({ dark }: Props) {
                   borderRadius: 14,
                   background: dark ? 'rgba(24,24,27,0.8)' : 'rgba(255,255,255,0.9)',
                   border: dark ? '1px solid rgba(255,255,255,0.07)' : '1px solid rgba(0,0,0,0.07)',
-                  boxShadow: dark ? '0 2px 12px rgba(0,0,0,0.2)' : '0 2px 12px rgba(0,0,0,0.04)',
+                  boxShadow: dark ? '0 2px 12px rgba(0,0,0,0.25)' : '0 2px 12px rgba(0,0,0,0.04)',
                 }}
               >
-                <div
-                  style={{
-                    fontFamily: "'Plus Jakarta Sans', sans-serif",
-                    fontWeight: 800,
-                    fontSize: 18,
-                    color: '#00C86F',
-                    letterSpacing: '-0.02em',
-                    marginBottom: 4,
-                  }}
-                >
+                <div style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 800, fontSize: 17, color: '#00C86F', letterSpacing: '-0.02em', marginBottom: 4 }}>
                   {c.value}
                 </div>
                 <div style={{ fontSize: 12.5, color: dark ? '#71717A' : '#71717A', fontWeight: 500 }}>
@@ -309,7 +295,6 @@ export default function About({ dark }: Props) {
             ))}
           </div>
 
-          {/* CTA */}
           <div
             className="about-animate"
             style={{

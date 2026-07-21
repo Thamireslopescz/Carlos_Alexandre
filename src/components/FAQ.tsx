@@ -6,32 +6,36 @@ interface Props {
 
 const faqs = [
   {
-    q: 'Preciso pagar alguma mensalidade ou taxa de adesão?',
-    a: 'Não. O PagBank não cobra mensalidade, taxa de adesão ou aluguel de maquininha. Você paga apenas a taxa sobre cada transação realizada. Nada mais.',
+    q: 'Preciso pagar mensalidade ou taxa de adesão para usar a maquininha?',
+    a: 'Não. O PagBank não cobra mensalidade, taxa de adesão nem aluguel de maquininha. Você paga apenas a taxa sobre cada transação realizada. Sem letras miúdas, sem surpresas.',
   },
   {
-    q: 'Em quanto tempo recebo o dinheiro das vendas?',
-    a: 'Para débito e Pix, o valor cai na conta em até 1 dia útil. Para crédito à vista, também em 1 dia útil com antecipação automática. Parcelado você recebe conforme as parcelas caem — ou pode antecipar tudo com taxas especiais.',
+    q: 'Quais são as formas de pagamento aceitas pela maquininha?',
+    a: 'As maquininhas PagBank aceitam crédito, débito, voucher, carteiras digitais (Apple Pay, Google Pay, Samsung Pay) e Pix. As principais bandeiras são: Visa, Mastercard, Elo, American Express, Hipercard, Diners Club e JCB.',
   },
   {
-    q: 'Quais bandeiras e meios de pagamento são aceitos?',
-    a: 'Todas as principais bandeiras: Visa, Mastercard, Elo, American Express, Hipercard, Diners, JCB. Além de carteiras digitais como Apple Pay, Google Pay e Samsung Pay. E claro, Pix.',
+    q: 'O que é a Antecipação de Vendas e como funciona?',
+    a: 'A Antecipação de Vendas permite que você acesse antecipadamente os valores das suas vendas no crédito parcelado. Em vez de aguardar o prazo de cada parcela, o dinheiro fica disponível na sua conta PagBank com mais agilidade. É possível antecipar tudo de uma vez ou conforme sua necessidade.',
   },
   {
-    q: 'Quanto tempo leva para ter a maquininha em mãos?',
-    a: 'Após a aprovação cadastral (que geralmente leva 24h), a entrega acontece em até 5 dias úteis. Para algumas regiões do Paraná, Santa Catarina e Rio Grande do Sul, a entrega pode ser ainda mais rápida.',
+    q: 'Como funciona o Link de Pagamento?',
+    a: 'O Link de Pagamento permite que você cobre clientes pelas redes sociais, WhatsApp ou qualquer canal digital. Você cria o link gratuitamente no app PagBank e envia para o cliente pagar — sem precisar de maquininha física. Aceita crédito, débito e Pix.',
   },
   {
-    q: 'Posso ter mais de uma maquininha?',
-    a: 'Sim! Muitos clientes têm múltiplas máquinas em pontos diferentes — lojas, caixas, vendedores externos. Carlos vai ajudá-lo a estruturar o melhor setup para a sua operação.',
+    q: 'Qual a diferença entre as maquininhas PagBank?',
+    a: 'Cada modelo tem um perfil de uso: a Moderninha Smart 2 é a mais versátil com Android e catálogo de apps; a Pro 2 é a mais potente para alto volume; a Plus 2 é mais rápida e compacta; a Minizinha Chip 3 é ideal para mobilidade com chip 4G; a Minizinha NFC 2 é a mais portátil; e o Tap On Phone transforma o celular em maquininha. Carlos analisa o seu perfil e indica a mais adequada.',
   },
   {
-    q: 'E se eu tiver problemas técnicos com a maquininha?',
-    a: 'O PagBank tem suporte técnico disponível 7 dias por semana. Além disso, Carlos acompanha diretamente seus clientes e facilita qualquer resolução necessária — é só chamar no WhatsApp.',
+    q: 'O que é a Conta PJ do PagBank?',
+    a: 'A Conta PJ do PagBank é uma conta digital empresarial gratuita, sem mensalidade. Inclui cartão de crédito e débito, Pix ilimitado, TED, boleto, e o saldo fica rendendo automaticamente. Toda a gestão é feita pelo app ou internet banking.',
   },
   {
-    q: 'A conta PJ do PagBank é realmente gratuita?',
-    a: 'Sim. A conta digital PJ do PagBank é 100% gratuita, sem mensalidade. Inclui cartão de crédito e débito, transferências via TED/PIX, e o saldo rende automaticamente ao CDI.',
+    q: 'O PagBank oferece soluções para empresas maiores?',
+    a: 'Sim. Além das maquininhas, o PagBank oferece soluções enterprise como PlugPag, TEF (Transferência Eletrônica de Fundos), PagTotem (autoatendimento), Split de Pagamentos, Pagamento Recorrente, Conciliação Financeira e Folha de Pagamento. Carlos tem experiência em implantar essas soluções em empresas de médio porte.',
+  },
+  {
+    q: 'Como entro em contato para obter uma proposta?',
+    a: 'Fale diretamente com Carlos Alexandre pelo WhatsApp. Ele realiza uma análise gratuita do perfil do seu negócio e apresenta a proposta mais adequada — sem compromisso e com total transparência. O atendimento é disponível todos os dias da semana.',
   },
 ]
 
@@ -46,7 +50,7 @@ function FaqItem({ q, a, dark }: { q: string; a: string; dark: boolean }) {
           ? dark ? 'rgba(0,200,111,0.06)' : 'rgba(0,200,111,0.04)'
           : dark ? 'rgba(24,24,27,0.6)' : 'rgba(255,255,255,0.8)',
         border: open
-          ? '1px solid rgba(0,200,111,0.2)'
+          ? '1px solid rgba(0,200,111,0.22)'
           : dark ? '1px solid rgba(255,255,255,0.06)' : '1px solid rgba(0,0,0,0.06)',
         overflow: 'hidden',
         transition: 'all 0.2s ease',
@@ -73,9 +77,9 @@ function FaqItem({ q, a, dark }: { q: string; a: string; dark: boolean }) {
           style={{
             fontFamily: "'Plus Jakarta Sans', sans-serif",
             fontWeight: 600,
-            fontSize: 15.5,
+            fontSize: 15,
             color: open ? '#00C86F' : dark ? '#E4E4E7' : '#18181B',
-            lineHeight: 1.4,
+            lineHeight: 1.45,
             transition: 'color 0.2s ease',
           }}
         >
@@ -107,7 +111,7 @@ function FaqItem({ q, a, dark }: { q: string; a: string; dark: boolean }) {
             padding: '0 22px 20px',
             fontSize: 14.5,
             color: dark ? '#A1A1AA' : '#52525B',
-            lineHeight: 1.7,
+            lineHeight: 1.75,
           }}
         >
           {a}
@@ -129,12 +133,12 @@ export default function FAQ({ dark }: Props) {
               setTimeout(() => {
                 ;(el as HTMLElement).style.opacity = '1'
                 ;(el as HTMLElement).style.transform = 'translateY(0)'
-              }, i * 60)
+              }, i * 50)
             })
           }
         })
       },
-      { threshold: 0.1 }
+      { threshold: 0.08 }
     )
     if (ref.current) observer.observe(ref.current)
     return () => observer.disconnect()
@@ -143,16 +147,10 @@ export default function FAQ({ dark }: Props) {
   return (
     <section
       ref={ref}
-      style={{
-        padding: '100px 0',
-        background: dark
-          ? 'linear-gradient(180deg, transparent 0%, rgba(0,200,111,0.02) 100%)'
-          : 'linear-gradient(180deg, transparent 0%, rgba(0,200,111,0.02) 100%)',
-      }}
+      style={{ padding: '100px 0' }}
       aria-label="Perguntas frequentes"
     >
-      <div style={{ maxWidth: 800, margin: '0 auto', padding: '0 24px' }}>
-        {/* Header */}
+      <div style={{ maxWidth: 820, margin: '0 auto', padding: '0 24px' }}>
         <div
           className="faq-animate"
           style={{
@@ -169,7 +167,7 @@ export default function FAQ({ dark }: Props) {
               padding: '5px 14px',
               borderRadius: 99,
               background: dark ? 'rgba(0,200,111,0.08)' : 'rgba(0,200,111,0.07)',
-              border: '1px solid rgba(0,200,111,0.18)',
+              border: '1px solid rgba(0,200,111,0.2)',
               marginBottom: 20,
               fontSize: 12.5,
               fontWeight: 600,
@@ -178,7 +176,7 @@ export default function FAQ({ dark }: Props) {
               textTransform: 'uppercase',
             }}
           >
-            Tire suas dúvidas
+            Dúvidas frequentes
           </div>
           <h2
             style={{
@@ -190,11 +188,10 @@ export default function FAQ({ dark }: Props) {
               lineHeight: 1.1,
             }}
           >
-            Perguntas frequentes
+            Tudo que você precisa saber
           </h2>
         </div>
 
-        {/* FAQ list */}
         <div>
           {faqs.map((faq, i) => (
             <div
@@ -202,7 +199,7 @@ export default function FAQ({ dark }: Props) {
               className="faq-animate"
               style={{
                 opacity: 0,
-                transform: 'translateY(16px)',
+                transform: 'translateY(14px)',
                 transition: 'opacity 0.4s ease, transform 0.4s ease',
               }}
             >
@@ -211,19 +208,18 @@ export default function FAQ({ dark }: Props) {
           ))}
         </div>
 
-        {/* Bottom note */}
         <div
           className="faq-animate"
           style={{
             textAlign: 'center',
             marginTop: 40,
             opacity: 0,
-            transform: 'translateY(16px)',
+            transform: 'translateY(14px)',
             transition: 'opacity 0.4s ease, transform 0.4s ease',
           }}
         >
           <p style={{ fontSize: 15, color: dark ? '#71717A' : '#71717A', lineHeight: 1.6 }}>
-            Ainda tem dúvidas?{' '}
+            Não encontrou sua resposta?{' '}
             <a
               href="https://wa.me/5541999999999?text=Olá%20Carlos%2C%20tenho%20uma%20dúvida!"
               target="_blank"
@@ -232,12 +228,12 @@ export default function FAQ({ dark }: Props) {
                 color: '#00C86F',
                 fontWeight: 600,
                 textDecoration: 'none',
-                borderBottom: '1px solid rgba(0,200,111,0.3)',
+                borderBottom: '1px solid rgba(0,200,111,0.35)',
                 paddingBottom: 1,
                 transition: 'border-color 0.2s',
               }}
             >
-              Fale diretamente com Carlos no WhatsApp
+              Pergunte diretamente para Carlos no WhatsApp
             </a>
           </p>
         </div>

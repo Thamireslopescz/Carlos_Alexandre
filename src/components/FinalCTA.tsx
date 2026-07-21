@@ -34,69 +34,45 @@ export default function FinalCTA({ dark }: Props) {
       ref={ref}
       id="contato"
       style={{ padding: '80px 24px' }}
-      aria-label="Contato"
+      aria-label="Contato — fale com Carlos"
     >
       <div
         style={{
-          maxWidth: 900,
+          maxWidth: 940,
           margin: '0 auto',
           borderRadius: 28,
-          padding: 'clamp(48px, 6vw, 80px)',
+          padding: 'clamp(48px, 7vw, 88px) clamp(32px, 6vw, 80px)',
           position: 'relative',
           overflow: 'hidden',
-          background: 'linear-gradient(135deg, #00C86F 0%, #008C52 60%, #006B40 100%)',
-          boxShadow: '0 24px 80px rgba(0,200,111,0.4)',
+          background: 'linear-gradient(135deg, #00C86F 0%, #007A44 65%, #005930 100%)',
+          boxShadow: '0 24px 80px rgba(0,200,111,0.38)',
           textAlign: 'center',
         }}
       >
-        {/* Decorative elements */}
+        {/* Decorative circles */}
+        <div aria-hidden="true" style={{ position: 'absolute', top: -70, right: -70, width: 280, height: 280, borderRadius: '50%', background: 'rgba(255,255,255,0.06)', pointerEvents: 'none' }} />
+        <div aria-hidden="true" style={{ position: 'absolute', bottom: -90, left: -50, width: 240, height: 240, borderRadius: '50%', background: 'rgba(255,255,255,0.04)', pointerEvents: 'none' }} />
+        <div aria-hidden="true" style={{ position: 'absolute', top: '30%', left: '5%', width: 120, height: 120, borderRadius: '50%', background: 'rgba(255,255,255,0.03)', pointerEvents: 'none' }} />
+        {/* Grid */}
         <div
           aria-hidden="true"
           style={{
-            position: 'absolute',
-            top: -60,
-            right: -60,
-            width: 280,
-            height: 280,
-            borderRadius: '50%',
-            background: 'rgba(255,255,255,0.06)',
-            pointerEvents: 'none',
-          }}
-        />
-        <div
-          aria-hidden="true"
-          style={{
-            position: 'absolute',
-            bottom: -80,
-            left: -40,
-            width: 220,
-            height: 220,
-            borderRadius: '50%',
-            background: 'rgba(255,255,255,0.04)',
-            pointerEvents: 'none',
-          }}
-        />
-        <div
-          aria-hidden="true"
-          style={{
-            position: 'absolute',
-            inset: 0,
-            backgroundImage: `linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)`,
+            position: 'absolute', inset: 0,
+            backgroundImage: `linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)`,
             backgroundSize: '40px 40px',
             pointerEvents: 'none',
           }}
         />
 
-        {/* Content */}
         <div style={{ position: 'relative', zIndex: 1 }}>
+          {/* Live badge */}
           <div
             className="cta-animate"
             style={{
               display: 'inline-flex',
               alignItems: 'center',
               gap: 8,
-              padding: '6px 16px',
+              padding: '7px 16px',
               borderRadius: 99,
               background: 'rgba(255,255,255,0.15)',
               border: '1px solid rgba(255,255,255,0.25)',
@@ -106,17 +82,15 @@ export default function FinalCTA({ dark }: Props) {
               transition: 'opacity 0.5s ease, transform 0.5s ease',
             }}
           >
-            <div
+            <span
               style={{
-                width: 8,
-                height: 8,
-                borderRadius: '50%',
-                background: '#fff',
+                width: 8, height: 8, borderRadius: '50%', background: '#fff',
                 animation: 'pulse-glow 2s ease-in-out infinite',
+                flexShrink: 0,
               }}
             />
-            <span style={{ fontSize: 13, fontWeight: 600, color: '#fff', letterSpacing: '0.02em' }}>
-              Atendimento disponível agora
+            <span style={{ fontSize: 13, fontWeight: 600, color: '#fff', letterSpacing: '0.01em' }}>
+              Disponível para atender agora · PR · SC · RS
             </span>
           </div>
 
@@ -135,9 +109,9 @@ export default function FinalCTA({ dark }: Props) {
               transition: 'opacity 0.5s ease, transform 0.5s ease',
             }}
           >
-            Pronto para transformar
+            Pronto para transformar os
             <br />
-            os pagamentos do seu negócio?
+            pagamentos do seu negócio?
           </h2>
 
           <p
@@ -145,19 +119,18 @@ export default function FinalCTA({ dark }: Props) {
             style={{
               fontSize: 18,
               color: 'rgba(255,255,255,0.82)',
-              lineHeight: 1.6,
-              maxWidth: 500,
+              lineHeight: 1.65,
+              maxWidth: 520,
               margin: '0 auto 40px',
               opacity: 0,
               transform: 'translateY(20px)',
               transition: 'opacity 0.5s ease, transform 0.5s ease',
             }}
           >
-            Fale com Carlos agora. Análise gratuita do seu perfil de vendas e proposta
-            personalizada em até 1 hora.
+            Fale com Carlos. Análise gratuita do perfil do seu negócio
+            e proposta personalizada — sem compromisso.
           </p>
 
-          {/* CTA buttons */}
           <div
             className="cta-animate"
             style={{
@@ -181,7 +154,7 @@ export default function FinalCTA({ dark }: Props) {
                 padding: '15px 32px',
                 borderRadius: 14,
                 background: '#fff',
-                color: '#008C52',
+                color: '#007A44',
                 fontWeight: 700,
                 fontSize: 16,
                 textDecoration: 'none',
@@ -214,7 +187,7 @@ export default function FinalCTA({ dark }: Props) {
                 padding: '15px 28px',
                 borderRadius: 14,
                 background: 'rgba(255,255,255,0.12)',
-                border: '1px solid rgba(255,255,255,0.25)',
+                border: '1px solid rgba(255,255,255,0.28)',
                 color: '#fff',
                 fontWeight: 600,
                 fontSize: 16,
@@ -238,19 +211,18 @@ export default function FinalCTA({ dark }: Props) {
             </a>
           </div>
 
-          {/* Trust note */}
           <p
             className="cta-animate"
             style={{
               fontSize: 13,
-              color: 'rgba(255,255,255,0.6)',
+              color: 'rgba(255,255,255,0.55)',
               marginTop: 28,
               opacity: 0,
-              transform: 'translateY(20px)',
+              transform: 'translateY(14px)',
               transition: 'opacity 0.5s ease, transform 0.5s ease',
             }}
           >
-            Proposta gratuita · Sem compromisso · Atendimento personalizado
+            Análise gratuita · Sem compromisso · Atendimento personalizado para o Sul do Brasil
           </p>
         </div>
       </div>
