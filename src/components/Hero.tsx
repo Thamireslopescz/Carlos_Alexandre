@@ -349,15 +349,6 @@ function HeroPhotoCard({ dark }: { dark: boolean }) {
         />
         {/* Name tag */}
         <div style={{ position: 'absolute', bottom: 24, left: 24, right: 24 }}>
-          <div
-            style={{
-              borderRadius: 16,
-              padding: '14px 18px',
-              background: 'rgba(9,9,11,0.7)',
-              backdropFilter: 'blur(24px)',
-              border: '1px solid rgba(255,255,255,0.1)',
-            }}
-          >
           </div>
         </div>
       </div>
