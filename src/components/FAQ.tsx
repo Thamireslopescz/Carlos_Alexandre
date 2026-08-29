@@ -19,11 +19,11 @@ const faqs = [
   },
   {
     q: 'Como funciona o Link de Pagamento?',
-    a: 'O Link de Pagamento permite que você cobre clientes pelas redes sociais, WhatsApp ou qualquer canal digital. Você cria o link gratuitamente no app PagBank e envia para o cliente pagar — sem precisar de maquininha física. Aceita crédito, débito e Pix.',
+    a: 'O Link de Pagamento permite que você cobre clientes pelas redes sociais, WhatsApp ou qualquer canal digital. Você cria o link gratuitamente no app PagBank e envia para o cliente pagar — sem precisar de maquininha física.',
   },
   {
     q: 'Qual a diferença entre as maquininhas PagBank?',
-    a: 'Cada modelo tem um perfil de uso: a Moderninha Smart 2 é a mais versátil com Android e catálogo de apps; a Pro 2 é a mais potente para alto volume; a Plus 2 é mais rápida e compacta; a Minizinha Chip 3 é ideal para mobilidade com chip 4G; a Minizinha NFC 2 é a mais portátil; e o Tap On Phone transforma o celular em maquininha. Carlos analisa o seu perfil e indica a mais adequada.',
+    a: 'Cada modelo tem um perfil de uso: a Moderninha Smart 2 é a mais versátil com Android e catálogo de apps; a Pro 2 é a mais potente para alto volume; a Plus 2 é mais rápida e compacta; a Minizinha Chip 3 é ideal para mobilidade com chip 4G; a Minizinha NFC 2 é a mais portátil; e o Tap On Phone transforma o celular em maquininha.',
   },
   {
     q: 'O que é a Conta PJ do PagBank?',
@@ -31,11 +31,11 @@ const faqs = [
   },
   {
     q: 'O PagBank oferece soluções para empresas maiores?',
-    a: 'Sim. Além das maquininhas, o PagBank oferece soluções enterprise como PlugPag, TEF (Transferência Eletrônica de Fundos), PagTotem (autoatendimento), Split de Pagamentos, Pagamento Recorrente, Conciliação Financeira e Folha de Pagamento. Carlos tem experiência em implantar essas soluções em empresas de médio porte.',
+    a: 'Sim. Além das maquininhas, o PagBank oferece soluções enterprise como PlugPag, TEF (Transferência Eletrônica de Fundos), PagTotem (autoatendimento), Split de Pagamentos, Pagamento Recorrente e Conciliação Financeira.',
   },
   {
     q: 'Como entro em contato para obter uma proposta?',
-    a: 'Fale diretamente com Carlos Alexandre pelo WhatsApp. Ele realiza uma análise gratuita do perfil do seu negócio e apresenta a proposta mais adequada — sem compromisso e com total transparência. O atendimento é disponível todos os dias da semana.',
+    a: 'Fale diretamente com Carlos Alexandre pelo WhatsApp. Ele realiza uma análise gratuita do perfil do seu negócio e apresenta a proposta mais adequada — sem compromisso e com total transparência.',
   },
 ]
 
@@ -233,7 +233,7 @@ export default function FAQ({ dark }: Props) {
                 transition: 'border-color 0.2s',
               }}
             >
-              Pergunte diretamente para Carlos no WhatsApp
+              Pergunte direto no WhatsApp
             </a>
           </p>
         </div>

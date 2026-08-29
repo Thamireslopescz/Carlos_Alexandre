@@ -40,7 +40,7 @@ const benefits = [
         <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .93h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.73a16 16 0 006.29 6.29l1.17-1.17a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
-    title: 'Atendimento direto com Carlos',
+    title: 'Atendimento direto com o Especialista',
     desc: 'Fale diretamente pelo WhatsApp. Sem call center, sem fila de espera. Resposta ágil e suporte contínuo.',
   },
   {
@@ -89,7 +89,7 @@ const benefits = [
       </svg>
     ),
     title: 'Aprovação ágil',
-    desc: 'Cadastro simples e aprovação rápida. Do pedido à primeira venda em tempo recorde, com suporte do Carlos em cada etapa.',
+    desc: 'Cadastro simples, suporte em cada etapa e aprovação rapida, sem burocracia!',
   },
 ]
 

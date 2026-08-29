@@ -239,9 +239,10 @@ export default function About({ dark }: Props) {
               transition: 'opacity 0.5s ease, transform 0.5s ease',
             }}
           >
-            Com mais de 8 anos de experiência no mercado de meios de pagamento, Carlos Alexandre
-            atua como consultor comercial sênior do PagBank, especializado em soluções completas
-            para empresas de todos os portes no Paraná, Santa Catarina e Rio Grande do Sul.
+            5 anos de Experiencia no Sistema Financeiro Cooperado, 
+            com Certificado Profissional Anbima de Investimento C-Pro I e C-Pro R. 
+            Executivo Comercial, especializado em soluções completas do seu Banco Digital PAGBANK,
+             atuando na Região das Hortensia e Vale dos Sinos.
           </p>
           <p
             className="about-animate"
@@ -255,10 +256,10 @@ export default function About({ dark }: Props) {
               transition: 'opacity 0.5s ease, transform 0.5s ease',
             }}
           >
-            Sua abordagem é diferente: sem scripts genéricos ou propostas padrão.
-            Carlos analisa cada negócio individualmente — maquininhas, conta PJ, antecipação
-            de recebíveis, Link de Pagamento e soluções enterprise — entregando o que
-            realmente faz sentido para o seu momento.
+            Linguagem simples, sem scripts ou burocracia institucional.
+             Analisamos cada negocio individualmente com suas nuancias e sazonalidade,
+              em um ecossistema completo, orgânico e prático. Entregamos o oque realmente
+               faz sentido para o seu negocios.
           </p>
 
           {/* Credentials */}

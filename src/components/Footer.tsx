@@ -64,7 +64,7 @@ export default function Footer({ dark }: Props) {
                 <div style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, fontSize: 14, color: dark ? '#FAFAFA' : '#09090B', letterSpacing: '-0.02em' }}>
                   Carlos Alexandre
                 </div>
-                <div style={{ fontSize: 11, color: '#00C86F', fontWeight: 500 }}>Consultor PagBank · Sul do Brasil</div>
+                <div style={{ fontSize: 11, color: '#00C86F', fontWeight: 500 }}>Executivo PAGBANK Polo Gramado</div>
               </div>
             </div>
             <p style={{ fontSize: 13.5, color: dark ? '#71717A' : '#71717A', lineHeight: 1.7, maxWidth: 280 }}>
@@ -186,7 +186,7 @@ export default function Footer({ dark }: Props) {
         {/* Bottom */}
         <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12 }}>
           <p style={{ fontSize: 12.5, color: dark ? '#52525B' : '#A1A1AA' }}>
-            © {new Date().getFullYear()} Carlos Alexandre · Consultor PagBank — Região Sul do Brasil
+            © {new Date().getFullYear()} Carlos Alexandre · Executivo PAGBANK Polo Gramado
           </p>
           <p style={{ fontSize: 12, color: dark ? '#3F3F46' : '#D4D4D8', maxWidth: 500, textAlign: 'right', lineHeight: 1.5 }}>
             Esta é uma página de prospecção de um consultor comercial independente do PagBank. Não é uma página oficial do PagBank S.A. Para canais oficiais, acesse pagbank.com.br.

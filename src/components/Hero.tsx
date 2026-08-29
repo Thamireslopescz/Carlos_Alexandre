@@ -278,9 +278,9 @@ export default function Hero({ dark }: Props) {
             }}
           >
             {[
-              { value: '+500', label: 'Clientes ativos' },
-              { value: '8 anos', label: 'De experiência' },
-              { value: 'PR · SC · RS', label: 'Região Sul' },
+              { value: '+4500', label: 'Clientes ativos' },
+              { value: '5 anos', label: 'De experiência no Sistema financeiro' },
+              { value: 'RS', label: 'Rio Grande do Sul' },
             ].map(stat => (
               <div key={stat.label}>
                 <div style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 800, fontSize: 24, color: '#00C86F', letterSpacing: '-0.03em', lineHeight: 1 }}>
@@ -335,7 +335,7 @@ function HeroPhotoCard({ dark }: { dark: boolean }) {
       >
         <img
           src={consultorPhoto}
-          alt="Carlos Alexandre — Consultor PagBank"
+          alt="Carlos Alexandre — Executivo PAGBANK Polo Gramado"
           style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
         />
         {/* Bottom overlay */}

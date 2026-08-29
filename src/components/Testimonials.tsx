@@ -8,7 +8,7 @@ const testimonials = [
   {
     name: 'Mariana Costa',
     role: 'Proprietária · Café & Padaria Bella',
-    location: 'Curitiba, PR',
+    location: 'Canela, RS',
     avatar: 'MC',
     rating: 5,
     text: 'O Carlos me atendeu de forma diferente de tudo que já tinha visto. Explicou cada detalhe das soluções, me ajudou a escolher a Moderninha certa e configurou tudo. O suporte pelo WhatsApp é rápido e direto — sem fila de espera.',
@@ -16,7 +16,7 @@ const testimonials = [
   {
     name: 'Roberto Almeida',
     role: 'Diretor Comercial · Almeida Distribuidora',
-    location: 'Florianópolis, SC',
+    location: 'Porto Alegre, RS',
     avatar: 'RA',
     rating: 5,
     text: 'Precisava de solução para alto volume de vendas. O Carlos entendeu o cenário e trouxe uma proposta com a Moderninha Pro 2 e Antecipação de Vendas. A conta PJ gratuita foi um bônus excelente para a gestão financeira.',
@@ -32,7 +32,7 @@ const testimonials = [
   {
     name: 'Felipe Oliveira',
     role: 'Sócio · FO Construções',
-    location: 'Maringá, PR',
+    location: 'Gramado, RS',
     avatar: 'FO',
     rating: 5,
     text: 'Nossa empresa tinha volume alto e precisávamos de maquininhas robustas com Split de Pagamentos. O Carlos negociou condições especiais e implantou tudo em menos de uma semana. Atendimento via WhatsApp muito ágil.',
@@ -40,7 +40,7 @@ const testimonials = [
   {
     name: 'Ana Beatriz Santos',
     role: 'Proprietária · Studio AB Estética',
-    location: 'Joinville, SC',
+    location: 'Canela, RS',
     avatar: 'AB',
     rating: 5,
     text: 'Mudei para o PagBank com o Carlos e foi a melhor decisão. A Antecipação de Vendas resolveu meu fluxo de caixa. A conta PJ gratuita organiza tudo em um só lugar. Atendimento impecável do início ao fim.',
@@ -48,7 +48,7 @@ const testimonials = [
   {
     name: 'Gustavo Mendes',
     role: 'Chef & Proprietário · Restaurante Mendes',
-    location: 'Blumenau, SC',
+    location: 'Gramado, RS',
     avatar: 'GM',
     rating: 5,
     text: 'O Carlos foi transparente sobre tudo: taxas, funcionalidades e limitações. Sem letras miúdas. Implantamos as Moderninhas em todos os caixas em menos de 3 dias. O app de gestão de vendas é excelente.',
@@ -127,9 +127,9 @@ export default function Testimonials({ dark }: Props) {
               marginBottom: 16,
             }}
           >
-            Empresários do Sul que já
+            Empresarios da Região de atuação do Polo Gramado,
             <br />
-            transformaram seus pagamentos
+            que ja transformaram seu negocio!
           </h2>
           {/* Rating bar */}
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10, marginTop: 14 }}>

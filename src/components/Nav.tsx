@@ -103,7 +103,7 @@ export default function Nav({ dark, onToggleDark }: Props) {
                   textTransform: 'uppercase',
                 }}
               >
-                Consultor PagBank
+                Executivo PAGBANK Polo Gramado
               </div>
             </div>
           </a>
