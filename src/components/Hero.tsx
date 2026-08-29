@@ -309,8 +309,17 @@ export default function Hero({ dark }: Props) {
 
       <style>{`
         @media (max-width: 900px) {
-          .hero-grid { grid-template-columns: 1fr !important; gap: 48px !important; }
-          .hero-photo-wrap { display: none !important; }
+          .hero-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+          /* Photo goes first on mobile */
+          .hero-photo-wrap {
+            order: -1;
+            width: 100%;
+            max-width: 380px;
+            margin: 0 auto;
+          }
+          /* Keep floating cards inside the viewport on mobile */
+          .hero-badge-float { right: 4px !important; top: 12px !important; }
+          .hero-stats-float { left: 4px !important; bottom: 24px !important; }
         }
       `}</style>
     </section>
@@ -351,6 +360,7 @@ function HeroPhotoCard({ dark }: { dark: boolean }) {
 
       {/* Floating badge */}
       <div
+        className="hero-badge-float"
         style={{
           position: 'absolute',
           top: 24,
@@ -393,6 +403,7 @@ function HeroPhotoCard({ dark }: { dark: boolean }) {
 
       {/* Floating stats card */}
       <div
+        className="hero-stats-float"
         style={{
           position: 'absolute',
           bottom: 60,
@@ -429,7 +440,7 @@ function HeroPhotoCard({ dark }: { dark: boolean }) {
         </div>
         <div>
           <div style={{ fontSize: 12.5, fontWeight: 700, color: dark ? '#FAFAFA' : '#09090B', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-            +500 empresas
+            +4500 empresas
           </div>
           <div style={{ fontSize: 11.5, color: dark ? '#71717A' : '#71717A' }}>Já confiam no Carlos</div>
         </div>
