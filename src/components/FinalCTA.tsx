@@ -90,7 +90,7 @@ export default function FinalCTA({ dark }: Props) {
               }}
             />
             <span style={{ fontSize: 13, fontWeight: 600, color: '#fff', letterSpacing: '0.01em' }}>
-              Disponível para atender agora · PR · SC · RS
+              Disponível para atender agora
             </span>
           </div>
 

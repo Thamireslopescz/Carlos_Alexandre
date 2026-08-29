@@ -32,9 +32,9 @@ export default function About({ dark }: Props) {
 
   const certs = [
     { label: 'Consultor certificado', value: 'PagBank Oficial' },
-    { label: 'Anos de experiência', value: '8 anos' },
-    { label: 'Clientes na carteira', value: '+500' },
-    { label: 'Região de atuação', value: 'PR · SC · RS' },
+    { label: 'Anos de experiência', value: '5 anos' },
+    { label: 'Clientes na carteira', value: '+4500' },
+    { label: 'Região de atuação', value: 'RS' },
   ]
 
   return (
